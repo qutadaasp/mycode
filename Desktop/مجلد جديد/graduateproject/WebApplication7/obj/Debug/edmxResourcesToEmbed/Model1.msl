@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExpertSystemModelStoreContainer" CdmEntityContainer="ExpertSystemEntities">
+    <EntitySetMapping Name="Attributes">
+      <EntityTypeMapping TypeName="ExpertSystemModel.Attributes">
+        <MappingFragment StoreEntitySet="Attributes">
+          <ScalarProperty Name="Residential" ColumnName="Residential" />
+          <ScalarProperty Name="commerical" ColumnName="commerical" />
+          <ScalarProperty Name="one" ColumnName="one" />
+          <ScalarProperty Name="two" ColumnName="two" />
+          <ScalarProperty Name="three" ColumnName="three" />
+          <ScalarProperty Name="four" ColumnName="four" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="D" ColumnName="D" />
+          <ScalarProperty Name="withinf" ColumnName="withinf" />
+          <ScalarProperty Name="withoutf" ColumnName="withoutf" />
+          <ScalarProperty Name="proximity" ColumnName="proximity" />
+          <ScalarProperty Name="far" ColumnName="far" />
+          <ScalarProperty Name="paved" ColumnName="paved" />
+          <ScalarProperty Name="unpaved" ColumnName="unpaved" />
+          <ScalarProperty Name="existenceservices" ColumnName="existenceservices" />
+          <ScalarProperty Name="lackservices" ColumnName="lackservices" />
+          <ScalarProperty Name="romured" ColumnName="romured" />
+          <ScalarProperty Name="sorted" ColumnName="sorted" />
+          <ScalarProperty Name="financial" ColumnName="financial" />
+          <ScalarProperty Name="newrent" ColumnName="newrent" />
+          <ScalarProperty Name="oldrent" ColumnName="oldrent" />
+          <ScalarProperty Name="stoneland" ColumnName="stoneland" />
+          <ScalarProperty Name="agriculturalland" ColumnName="agriculturalland" />
+          <ScalarProperty Name="sandland" ColumnName="sandland" />
+          <ScalarProperty Name="littleslope" ColumnName="littleslope" />
+          <ScalarProperty Name="midslope" ColumnName="midslope" />
+          <ScalarProperty Name="largeslope" ColumnName="largeslope" />
+          <ScalarProperty Name="elevatorexist" ColumnName="elevatorexist" />
+          <ScalarProperty Name="elavatornotexist" ColumnName="elavatornotexist" />
+          <ScalarProperty Name="buildingpermitexist" ColumnName="buildingpermitexist" />
+          <ScalarProperty Name="buildingpermitnotexist" ColumnName="buildingpermitnotexist" />
+          <ScalarProperty Name="upperfloar" ColumnName="upperfloar" />
+          <ScalarProperty Name="midfloar" ColumnName="midfloar" />
+          <ScalarProperty Name="landfloar" ColumnName="landfloar" />
+          <ScalarProperty Name="underlandfloar" ColumnName="underlandfloar" />
+          <ScalarProperty Name="stoneandinsulatingmaterials" ColumnName="stoneandinsulatingmaterials" />
+          <ScalarProperty Name="naturalstone" ColumnName="naturalstone" />
+          <ScalarProperty Name="industrialstone" ColumnName="industrialstone" />
+          <ScalarProperty Name="blocks" ColumnName="blocks" />
+          <ScalarProperty Name="qualitygood" ColumnName="qualitygood" />
+          <ScalarProperty Name="qualitybad" ColumnName="qualitybad" />
+          <ScalarProperty Name="healthgood" ColumnName="healthgood" />
+          <ScalarProperty Name="healthbad" ColumnName="healthbad" />
+          <ScalarProperty Name="rebounds" ColumnName="rebounds" />
+          <ScalarProperty Name="parkingexist" ColumnName="parkingexist" />
+          <ScalarProperty Name="parkingnotexist" ColumnName="parkingnotexist" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="reboundsexist" ColumnName="reboundsexist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Price">
+      <EntityTypeMapping TypeName="ExpertSystemModel.Price">
+        <MappingFragment StoreEntitySet="Price">
+          <ScalarProperty Name="North" ColumnName="North" />
+          <ScalarProperty Name="South" ColumnName="South" />
+          <ScalarProperty Name="East" ColumnName="East" />
+          <ScalarProperty Name="West" ColumnName="West" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

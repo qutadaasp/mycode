@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ExpertSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Attributes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Residential" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="commerical" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="one" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="two" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="three" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="four" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="A" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="B" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="C" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="D" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="withinf" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="withoutf" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="proximity" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="far" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="paved" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="unpaved" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="existenceservices" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="lackservices" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="romured" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="sorted" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="financial" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="newrent" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="oldrent" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="stoneland" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="agriculturalland" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="sandland" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="littleslope" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="midslope" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="largeslope" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="elevatorexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="elavatornotexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="buildingpermitexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="buildingpermitnotexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="upperfloar" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="midfloar" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="landfloar" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="underlandfloar" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="stoneandinsulatingmaterials" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="naturalstone" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="industrialstone" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="blocks" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="qualitygood" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="qualitybad" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="healthgood" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="healthbad" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="rebounds" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="parkingexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="parkingnotexist" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="reboundsexist" Type="decimal" Precision="5" Scale="4" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ExpertSystem.dbo.Price' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="North" />
+            <PropertyRef Name="South" />
+            <PropertyRef Name="East" />
+            <PropertyRef Name="West" />
+          </Key>
+          <Property Name="North" Type="int" Nullable="false" />
+          <Property Name="South" Type="int" Nullable="false" />
+          <Property Name="East" Type="float" Nullable="false" />
+          <Property Name="West" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ExpertSystemModelStoreContainer">
+          <EntitySet Name="Attributes" EntityType="Self.Attributes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Price" EntityType="Self.Price" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Price].[North] AS [North], 
+    [Price].[South] AS [South], 
+    [Price].[East] AS [East], 
+    [Price].[West] AS [West]
+    FROM [dbo].[Price] AS [Price]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ExpertSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Attributes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Residential" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="commerical" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="one" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="two" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="three" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="four" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="A" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="B" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="C" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="D" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="withinf" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="withoutf" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="proximity" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="far" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="paved" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="unpaved" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="existenceservices" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="lackservices" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="romured" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="sorted" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="financial" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="newrent" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="oldrent" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="stoneland" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="agriculturalland" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="sandland" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="littleslope" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="midslope" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="largeslope" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="elevatorexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="elavatornotexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="buildingpermitexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="buildingpermitnotexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="upperfloar" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="midfloar" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="landfloar" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="underlandfloar" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="stoneandinsulatingmaterials" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="naturalstone" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="industrialstone" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="blocks" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="qualitygood" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="qualitybad" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="healthgood" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="healthbad" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="rebounds" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="parkingexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="parkingnotexist" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="reboundsexist" Type="Decimal" Precision="5" Scale="4" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="North" />
+            <PropertyRef Name="South" />
+            <PropertyRef Name="East" />
+            <PropertyRef Name="West" />
+          </Key>
+          <Property Name="North" Type="Int32" Nullable="false" />
+          <Property Name="South" Type="Int32" Nullable="false" />
+          <Property Name="East" Type="Double" Nullable="false" />
+          <Property Name="West" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ExpertSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Attributes" EntityType="Self.Attributes" />
+          <EntitySet Name="Price" EntityType="Self.Price" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ExpertSystemModelStoreContainer" CdmEntityContainer="ExpertSystemEntities">
+          <EntitySetMapping Name="Attributes">
+            <EntityTypeMapping TypeName="ExpertSystemModel.Attributes">
+              <MappingFragment StoreEntitySet="Attributes">
+                <ScalarProperty Name="Residential" ColumnName="Residential" />
+                <ScalarProperty Name="commerical" ColumnName="commerical" />
+                <ScalarProperty Name="one" ColumnName="one" />
+                <ScalarProperty Name="two" ColumnName="two" />
+                <ScalarProperty Name="three" ColumnName="three" />
+                <ScalarProperty Name="four" ColumnName="four" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="B" ColumnName="B" />
+                <ScalarProperty Name="C" ColumnName="C" />
+                <ScalarProperty Name="D" ColumnName="D" />
+                <ScalarProperty Name="withinf" ColumnName="withinf" />
+                <ScalarProperty Name="withoutf" ColumnName="withoutf" />
+                <ScalarProperty Name="proximity" ColumnName="proximity" />
+                <ScalarProperty Name="far" ColumnName="far" />
+                <ScalarProperty Name="paved" ColumnName="paved" />
+                <ScalarProperty Name="unpaved" ColumnName="unpaved" />
+                <ScalarProperty Name="existenceservices" ColumnName="existenceservices" />
+                <ScalarProperty Name="lackservices" ColumnName="lackservices" />
+                <ScalarProperty Name="romured" ColumnName="romured" />
+                <ScalarProperty Name="sorted" ColumnName="sorted" />
+                <ScalarProperty Name="financial" ColumnName="financial" />
+                <ScalarProperty Name="newrent" ColumnName="newrent" />
+                <ScalarProperty Name="oldrent" ColumnName="oldrent" />
+                <ScalarProperty Name="stoneland" ColumnName="stoneland" />
+                <ScalarProperty Name="agriculturalland" ColumnName="agriculturalland" />
+                <ScalarProperty Name="sandland" ColumnName="sandland" />
+                <ScalarProperty Name="littleslope" ColumnName="littleslope" />
+                <ScalarProperty Name="midslope" ColumnName="midslope" />
+                <ScalarProperty Name="largeslope" ColumnName="largeslope" />
+                <ScalarProperty Name="elevatorexist" ColumnName="elevatorexist" />
+                <ScalarProperty Name="elavatornotexist" ColumnName="elavatornotexist" />
+                <ScalarProperty Name="buildingpermitexist" ColumnName="buildingpermitexist" />
+                <ScalarProperty Name="buildingpermitnotexist" ColumnName="buildingpermitnotexist" />
+                <ScalarProperty Name="upperfloar" ColumnName="upperfloar" />
+                <ScalarProperty Name="midfloar" ColumnName="midfloar" />
+                <ScalarProperty Name="landfloar" ColumnName="landfloar" />
+                <ScalarProperty Name="underlandfloar" ColumnName="underlandfloar" />
+                <ScalarProperty Name="stoneandinsulatingmaterials" ColumnName="stoneandinsulatingmaterials" />
+                <ScalarProperty Name="naturalstone" ColumnName="naturalstone" />
+                <ScalarProperty Name="industrialstone" ColumnName="industrialstone" />
+                <ScalarProperty Name="blocks" ColumnName="blocks" />
+                <ScalarProperty Name="qualitygood" ColumnName="qualitygood" />
+                <ScalarProperty Name="qualitybad" ColumnName="qualitybad" />
+                <ScalarProperty Name="healthgood" ColumnName="healthgood" />
+                <ScalarProperty Name="healthbad" ColumnName="healthbad" />
+                <ScalarProperty Name="rebounds" ColumnName="rebounds" />
+                <ScalarProperty Name="parkingexist" ColumnName="parkingexist" />
+                <ScalarProperty Name="parkingnotexist" ColumnName="parkingnotexist" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="reboundsexist" ColumnName="reboundsexist" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Price">
+            <EntityTypeMapping TypeName="ExpertSystemModel.Price">
+              <MappingFragment StoreEntitySet="Price">
+                <ScalarProperty Name="North" ColumnName="North" />
+                <ScalarProperty Name="South" ColumnName="South" />
+                <ScalarProperty Name="East" ColumnName="East" />
+                <ScalarProperty Name="West" ColumnName="West" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
