@@ -1,0 +1,14 @@
+footer {
+    margin-top: 22px;
+}
+a p {
+    color: rgb(13, 110, 253) !important;
+}
+.card .card-body figure #linked-in p{
+    display: inline-block !important;
+}
+a {
+    display: inline-block !important;
+    color: rgb(13, 110, 253) !important;
+    text-decoration: none;
+}

@@ -1,0 +1,398 @@
+<img
+src="../../assets/images/realtor-male-assistant-illustrated_23-2148671323.jpeg" />
+<!-- <div class="overlayer"></div>
+<form class="container m-auto flex-row" action="/action_page.php">
+  <div class="form-group row col-12 mb-5 space top-one">
+    <div class="col-8">
+      <label for="street-number">كم عدد الشوارع التي تقع عليها البناية؟ و ما نوعها؟</label>
+      <input type="number" class="form-control" id="street-number" name="street-number" min="1" max="4">
+    </div>
+    <div class="col-2">
+      <div class="form-check col-10 mb-5">
+        <input class="form-check-input closer" type="checkbox" id="street-type" name="street-type" value="paved">
+        <label class="form-check-label" for="street-type">هل الشارع معبد؟</label>
+      </div>
+    </div>
+    <button class="btn btn-primary col-1">add street</button>
+  </div>
+
+  <hr/>
+
+  <div class="form-group col-12 mb-5 space">
+    <label for="location">موقع القطعة تنظيمياً؟</label>
+    <select class="form-control" id="location" name="location">
+      <option value="none">Choose...</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+  </div>
+
+  <hr/>
+
+  <div class="form-group col-4 mb-5 space">
+    <label for="distance">بُعد البناية عن المراكز الحيوية :</label>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="center-distance" name="distance" value="near">
+      <label class="form-check-label" for="short-distance">قريب</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="center-distance" name="distance" value="away">
+      <label class="form-check-label" for="long-distance">بعيد</label>
+    </div>
+  </div>
+
+  <div class="form-group col-4 mb-5 space">
+    <label for="services">هل الخدمات (الكهرباء، الماء، الصرف الصحي، المواصلات، …) متوفر؟</label>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="services-available" name="services" value="available">
+      <label class="form-check-label" for="services-available">متوفر</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="services-not-available" name="services" value="inavailable">
+      <label class="form-check-label" for="services-not-available">غير متوفر</label>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="form-group col-6 mb-5 space">
+    <label for="land-type">نوع الأرض :</label>
+    <input type="text" class="form-control" id="land-type" name="land-type">
+  </div>
+
+  <div class="form-group col-4 mb-5 space">
+    <label for="ownership-type">نوع الملكية :</label>
+    <select class="form-control" id="ownership-type" name="ownership-type">
+      <option value="none">اختر الملكية...</option>
+      <option value="Common">طابو مشاع</option>
+      <option value="Detached">طابو مفرز</option>
+      <option value="financial">عقد مالية</option>
+    </select>
+  </div>
+
+  <hr/>
+
+  <div class="form-group col-6 mb-5 space">
+    <label for="land-slope">ميل الأرض :</label>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="mild-slope" name="land-slope" value="simple">
+      <label class="form-check-label" for="mild-slope">لا يوجد أو ميل بسيط</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="moderate-slope" name="land-slope" value="medium">
+      <label class="form-check-label" for="moderate-slope">ميل متوسط</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="large-slope" name="land-slope" value="high">
+      <label class="form-check-label" for="large-slope">الميل كبير</label>
+    </div>
+  </div>
+  
+  <div class="form-group col-4 mb-5 space">
+    <label for="building-materials">مواد البناء المستخدمة :</label>
+    <select class="form-control" id="building-materials" name="building-materials">
+      <option value="none">اختر مواد البناء...</option>
+      <option value="isolation">حجر مع مواد عازلة</option>
+      <option value="natural">حجر طبيعي</option>
+      <option value="artificial">حجر صناعي</option>
+      <option value="brick">بلوك</option>
+    </select>
+  </div>
+  
+  <div class="form-group col-4 mb-5 space">
+    <label for="building-health">صحة البناء :</label>
+    <div class="row">
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="building-health-good" name="building-health" value="good">
+        <label class="form-check-label" for="building-health-good">جيدة</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="building-health-poor" name="building-health" value="bad">
+        <label class="form-check-label" for="building-health-poor">سيئة</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group col-4 mb-5 space">
+    <label for="building-quality">جودة البناء :</label>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="building-quality-good" name="building-quality" value="good">
+      <label class="form-check-label" for="building-quality-good">جيدة</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input closer" type="radio" id="building-quality-poor" name="building-quality-poor" value="bad">
+      <label class="form-check-label" for="building-quality-poor">سيئة</label>
+    </div>
+  </div>
+  
+    <div class="form-group col-4 mb-5 space">
+      <label for="elevator">توفر المصعد :</label>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="elevator-available" name="elevator" value="yes">
+        <label class="form-check-label" for="elevator-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="elevator-not-available" name="elevator" value="no">
+        <label class="form-check-label" for="elevator-not-available">غير متوفر</label>
+      </div>
+    </div>
+    
+      <div class="form-group col-4 mb-5 space">
+        <label for="floor-number">رقم الطابق :</label>
+        <input type="number" class="form-control" id="floor-number" name="floor-number">
+      </div>
+  
+    <div class="form-group col-12 mb-5 space">
+      <label for="building-permit">توفر رخصة للبناء :</label>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" id="building-permit-available" name="building-permit"
+          value="building-permit-available">
+        <label class="form-check-label" for="building-permit-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" id="building-permit-not-available" name="building-permit"
+          value="غير متوفر">
+        <label class="form-check-label" for="building-permit-not-available">غير متوفر</label>
+      </div>
+    </div>
+  
+  <div class="form-group col-12 mb-5 space">
+    <label for="drainage">توفر ارتدادات :</label>
+    <div class="form-check">
+      <input class="form-check-input v-closer" type="radio" id="drainage-good" name="drainage" value="good">
+      <label class="form-check-label" for="drainage-good">جيدة</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input v-closer" type="radio" id="drainage-poor" name="drainage" value="bad">
+      <label class="form-check-label" for="drainage-poor">ضعيفة</label>
+    </div>
+  </div>
+
+  <div class="form-group col-12 mb-5 space">
+    <label for="parking">توفر موقف سيارات تابع للبناء :</label>
+    <div class="form-check">
+      <input class="form-check-input v-closer" type="radio" id="parking-available" name="parking" value="yes">
+      <label class="form-check-label" for="parking-available">متوفر</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input v-closer" type="radio" id="parking-not-available" name="parking" value="no">
+      <label class="form-check-label" for="parking-not-available">غير متوفر</label>
+    </div>
+  </div>
+
+  <div class="sub_btn col-12 space">
+    <button type="submit" class="btn btn-primary" style="padding: 2px 5px;">احصل على ال نتيجة</button>
+  </div>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p class="success">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0 success">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
+</form> -->
+
+<div>
+  <form [formGroup]="RegisterForm" class="container m-auto pb-5" (ngSubmit)="register(RegisterForm)">
+    <div class="form-group row col-12 mb-5 space top-one">
+      <div class="col-6" style="margin-left: 2%;">
+        <label for="streetnumber">كم عدد الشوارع التي تقع عليها البناية؟</label>
+        <select class="form-control" id="street-number" formControlName="streetnumber">
+          <option value="one">واحد</option>
+          <option value="two">اثنين</option>
+          <option value="three">ثلاثة</option>
+          <option value="four">أربعة</option>
+        </select>
+      </div>
+      <div class="col-1">
+        <label for="#" style="font-size:18.5px !important;">هل الشوارع معبدة؟</label>
+      </div>
+      <div class="col-2">
+        <div class="form-check col-10 mb-5">
+          <input class="form-check-input closer" type="radio" id="street-type" formControlName="pavedstreet" value="paved">
+          <label class="form-check-label" for="pavedstreet">معبدة</label>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="form-check col-10 mb-5">
+          <input class="form-check-input closer" type="radio" id="street-type" formControlName="pavedstreet" value="unpaved">
+          <label class="form-check-label margin" for="pavedstreet">غير معبدة</label>
+        </div>
+      </div>
+      <div class="col-8">
+        <label for="streettype">نوع الشارع؟</label>
+        <select class="form-control" id="street-number" formControlName="streettype">
+          <option value="commerical">سكني</option>
+          <option value="residential">تجاري</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-group col-8 mb-5 space">
+      <label for="landlocation">موقع القطعة تنظيمياً؟</label>
+      <select formControlName="landlocation" class="form-control" id="location" >
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+      </select>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="vitalcenter">بُعد البناية عن المراكز الحيوية :</label>
+      <div class="form-check">
+        <input class="form-check-input closer" formControlName="vitalcenter" type="radio" id="center-distance"  value="proximity">
+        <label class="form-check-label" for="short-distance">قريب</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" formControlName="vitalcenter" type="radio" id="center-distance"  value="far">
+        <label class="form-check-label" for="long-distance">بعيد</label>
+      </div>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="services">هل الخدمات (الكهرباء، الماء، الصرف الصحي، المواصلات، …) متوفر؟</label>
+      <div class="form-check">
+        <input class="form-check-input closer" formControlName="services" type="radio" id="services-available"  value="lacke">
+        <label class="form-check-label" for="services-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" formControlName="services" type="radio" id="services-not-available"  value="lack">
+        <label class="form-check-label" for="services-not-available">غير متوفر</label>
+      </div>
+    </div>
+
+    <div class="form-group col-6 mb-5 space">
+      <label for="landtype">نوع الأرض :</label>
+      <select class="form-control" id="land-type" formControlName="landtype">
+        <option value="stone">صخرية</option>
+        <option value="sand">رملية</option>
+        <option value="agriculture">زراعية</option>
+      </select>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="propertycontract">نوع الملكية :</label>
+      <select formControlName="propertycontract" class="form-control" id="ownership-type" >
+        <option value="romured">طابو مشاع</option>
+        <option value="sorted">طابو مفرز</option>
+        <option value="financial">عقد مالية</option>
+      </select>
+    </div>
+
+    <div class="form-group col-6 mb-5 space">
+      <label for="slope">ميل الأرض :</label>
+      <div class="form-check">
+        <input class="form-check-input closer" formControlName="slope" type="radio" id="mild-slope"  value="little">
+        <label class="form-check-label" for="mild-slope">لا يوجد أو ميل بسيط</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" formControlName="slope" id="moderate-slope"  value="midle">
+        <label class="form-check-label" for="moderate-slope">ميل متوسط</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" formControlName="slope" id="large-slope"  value="large">
+        <label class="form-check-label" for="large-slope">الميل كبير</label>
+      </div>
+    </div>
+   
+    <div class="form-group col-4 mb-5 space">
+      <label for="materials">مواد البناء المستخدمة :</label>
+      <select class="form-control" formControlName="materials" id="building-materials" >
+        <option value="naturalwith">حجر مع مواد عازلة</option>
+        <option value="natural">حجر طبيعي</option>
+        <option value="industrial">حجر صناعي</option>
+        <option value="blocks">بلوك</option>
+      </select>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="health">صحة البناء :</label>
+      <div class="row">
+        <div class="form-check">
+          <input class="form-check-input closer" type="radio" formControlName="health" id="building-health-good"  value="good">
+          <label class="form-check-label" for="building-health-good">جيدة</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input closer" type="radio" formControlName="health" id="building-health-poor"  value="bad">
+          <label class="form-check-label" for="building-health-poor">سيئة</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="quality">جودة البناء :</label>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="building-quality-good" formControlName="quality" value="good">
+        <label class="form-check-label" for="building-quality-good">جيدة</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" id="building-quality-poor" formControlName="quality" value="bad">
+        <label class="form-check-label" for="building-quality-poor">سيئة</label>
+      </div>
+    </div>
+
+    <div class="form-group col-4 mb-5 space">
+      <label for="elevator">توفر المصعد :</label>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" formControlName="elevator" id="elevator-available"  value="exist">
+        <label class="form-check-label" for="elevator-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input closer" type="radio" formControlName="elevator" id="elevator-not-available"  value="notexist">
+        <label class="form-check-label" for="elevator-not-available">غير متوفر</label>
+      </div>
+    </div>
+    
+      <div class="form-group col-4 mb-5 space">
+        <label for="floor">رقم الطابق :</label>
+        <input type="number" formControlName="floor" class="form-control" id="floor-number" min="-2" max="6">
+      </div>
+  
+    <div class="form-group col-12 mb-5 space">
+      <label for="permit">توفر رخصة للبناء :</label>
+      <div class="form-check">
+        <input class="form-check-input v-closer" formControlName="permit" type="radio" id="building-permit-available"
+          value="exist">
+        <label class="form-check-label" for="building-permit-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" formControlName="permit" id="building-permit-not-available" 
+          value="notexist">
+        <label class="form-check-label" for="building-permit-not-available">غير متوفر</label>
+      </div>
+    </div>
+
+    <div class="form-group col-12 mb-5 space">
+      <label for="rebound">توفر ارتدادات :</label>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" formControlName="rebound" id="drainage-good"  value="exist">
+        <label class="form-check-label" for="drainage-good">جيدة</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" formControlName="rebound" id="drainage-poor"  value="notexist">
+        <label class="form-check-label" for="drainage-poor">ضعيفة</label>
+      </div>
+    </div>
+  
+    <div class="form-group col-12 mb-5 space">
+      <label for="park">توفر موقف سيارات تابع للبناء :</label>
+      <div class="form-check">
+        <input class="form-check-input v-closer" formControlName="park" type="radio" id="parking-available" value="exist">
+        <label class="form-check-label" for="parking-available">متوفر</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input v-closer" type="radio" formControlName="park" id="parking-not-available" value="notexist">
+        <label class="form-check-label" for="parking-not-available">غير متوفر</label>
+      </div>
+    </div>
+  
+    <div class="sub_btn col-12 space">
+      <!-- (click)="result()" -->
+      <button type="submit" class="btn btn-primary submit" style="padding: 2px 5px;">احصل على النتيجة</button>
+    </div>
+    
+  
+  </form>
+</div>

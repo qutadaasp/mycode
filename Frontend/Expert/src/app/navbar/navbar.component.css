@@ -1,0 +1,40 @@
+*{
+    font-size: 24px !important;
+}
+
+.active{
+    border-bottom:2px solid red
+}
+.navbar {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1 !important;
+}
+.nav-link{
+    color: rgb(26, 26, 252);
+}
+.navbar-nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.navbar-brand {
+    font-size: 30px !important;
+}
+.overlayer {
+    position: absolute;
+    background-color: rgba(255, 236, 220, 0.752);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 12vh;
+    z-index: 0;
+    box-shadow: 0 2px rgb(60, 15, 2);
+}
+.navbar .navbar-brand {
+    color: white;
+    background-color: coral !important;
+    border-color: coral !important;
+}
